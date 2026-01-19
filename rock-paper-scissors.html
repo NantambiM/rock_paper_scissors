@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="rps.css">
+</head>
+
+  <body>
+  <div class="app">
+
+    <!-- Quit button -->
+    <button class="quit-btn not-playing" >Quit</button>
+
+    <!-- Welcome screen -->
+    <section id="welcome" class="screen active">
+      <h1>Hello 👋</h1>
+      <h3>Do you want to play Rock, Paper, Scissors?</h3>
+      <div class="button-group">
+        <button class="primary" id="yes">Yes</button>
+        <button class="secondary not-playing">No</button>
+      </div>
+    </section>
+
+    <!-- Choice screen -->
+    <section id="choices" class="screen">
+      <h2>Choose one of the three</h2>
+      <div class="choice-buttons">
+        <button data-choice="rock" class="choice">✊ Rock</button>
+        <button data-choice="paper" class="choice">✋ Paper</button>
+        <button data-choice="scissors" class="choice">✌ Scissors</button>
+      </div>
+    </section>
+
+    <!-- Results screen -->
+    <section id="results" class="screen ">
+      <h2>Result</h2>
+      <p id="result-text"></p>
+
+      <p class="score">
+        Wins: <span id="wins">0</span> |
+        Losses: <span id="losses">0</span> |
+        Ties: <span id="ties">0</span>
+      </p>
+
+      <button class="secondary reset">Reset Score</button>
+
+      <button class="play-again">Play again?</button>
+    </section>
+
+    <section id="exit" class="screen">
+      <p><b> See you next time.</b></p>
+      <button class="play-again">Play Now?</button>
+    </section>
+
+  </div>
+  <script src="rps.js"></script>
+  </body>
+</html>
+

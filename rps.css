@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6d9ff, #dff6ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2c2c2c;
+}
+
+/* App container */
+.app {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  width: 90%;
+  max-width: 450px;
+  min-height: 500px;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Quit button */
+.quit-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.quit-btn:hover {
+  color: #000;
+}
+
+/* Screens */
+.screen {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.6s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.screen.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Button styles */
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Button groups */
+.button-group,
+.choice-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* colors */
+.primary {
+  background: linear-gradient(135deg, #a78bfa, #60a5fa);
+  color: white;
+}
+
+.secondary {
+  background: #f1f5f9;
+}
+
+/* Choice buttons */
+.choice-buttons button {
+  background: white;
+  font-size: 1.1rem;
+}
+
+/* Result */
+#result-text {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.score {
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Play again */
+.play-again {
+  margin-top: 30px;
+  width: 100%;
+  background: linear-gradient(135deg, #67e8f9, #a78bfa);
+  color: white;
+}
